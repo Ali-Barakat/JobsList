@@ -65,6 +65,7 @@
   color: #fff;
   font-size: 15px;
   letter-spacing: 1px;
+  cursor: pointer;
 }
 
 .fitler-tablets {
@@ -97,6 +98,31 @@
   }
 }
 
+.header {
+  display: flex;
+}
+
+.wrap__clear {
+  text-align: right;
+  width: 10%;
+}
+
+.wrap__tags {
+  text-align: left;
+  width: 90%;
+}
+
+.clear {
+  color: #fff;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.tags {
+  color: hsl(180, 8%, 52%);
+}
+
 .u-mr-b--large {
   margin-bottom: 30px;
 }
@@ -117,10 +143,18 @@
   padding: 35px;
 }
 
+.u-pdd-r--small {
+  padding-right: 10px;
+}
+
 .u-pdd-r--medium {
   padding-right: 20px;
 }
 
 .u-pdd-r--large {
   padding-right: 30px;
+}
+
+.u-pdd-t--small {
+  padding-top: 10px;
 }

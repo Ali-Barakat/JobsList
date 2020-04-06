@@ -17,13 +17,10 @@ class App extends Component {
 
     return (
       <div className="App">
-        <header className="App-header">
-        <h2>Jobs List component</h2>
           <div className="container">
           <Job />
           </div>
   
-        </header>
       </div>
     );
   }

@@ -8,6 +8,7 @@ body {
   text-decoration: none;
   padding: 0;
   box-sizing: border-box;
+  background-color: #282c34;
 }
 
 code {
@@ -17,5 +18,5 @@ code {
 
 .container {
   width: 65%;
-  margin: auto;
+  margin: 5px auto;
 }
