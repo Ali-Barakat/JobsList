@@ -7,21 +7,6 @@
   color: grey;
 }
 
-// featured-line{
-
-//   ::after {
-//     position: absolute;
-//     content: '';
-//     top: 0;
-//     left: 0;
-//     width: 3px;
-//     height: 100%;
-//     background-color: hsl(180, 8%, 52%);
-//     opacity: 1
-
-//     }
-//   }
-
 .job-card {
   position: relative;
   background-color: #333;
@@ -91,10 +76,11 @@
     content: '';
     top: 0;
     left: 0;
-    width: 3px;
+    width: 6px;
     height: 100%;
     background-color: hsl(180, 8%, 52%);
-    opacity: 1
+    opacity: 1;
+    border-radius: 10px 0 0 10px;
   }
 }
 
@@ -157,4 +143,54 @@
 
 .u-pdd-t--small {
   padding-top: 10px;
+}
+
+@media (max-width: 375px) {
+  body {
+    background-color: #464b55;
+  }
+  .container {
+    width: 90%;
+    .job-card {
+      margin-top: 35px;
+      margin-bottom: 50px;
+      display: block;
+      border-radius: 10px;
+      .wrap__content {
+        padding: 40px 15px 15px 30px;
+        width: 100%;
+        &:after {
+          position: absolute;
+          content: '';
+          display: block;
+          top: 135px;
+          left: 30px;
+          width: 80%;
+          height: 1px;
+          background-color: gray;
+        }
+      }
+      .logo {
+      position: absolute;
+      top: -65px;
+      left: -10px;
+      width: 40px;
+        img {
+        width: 60px;
+      }
+      }
+    }
+  }
+
+  .fitler-tablets {
+    display: inline-block;
+    line-height: 2.5;
+    padding: 17px 10px 25px 30px;
+    width: 100%;
+    text-align: left;
+
+    .tablets {
+      display: inline;
+    }
+  }
 }

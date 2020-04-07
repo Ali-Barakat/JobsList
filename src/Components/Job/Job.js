@@ -20,7 +20,6 @@ export default class Job extends Component {
   render() {
     let jobs = [];
     const jobsToShow = this.state.jobsToShow;
-    // let languages =this.state.jobs.map(job => job.languages);
     if (jobsToShow === 'all') {
       jobs = this.state.jobs;
     } else if (jobsToShow === 'featured') {
@@ -72,22 +71,22 @@ export default class Job extends Component {
             <img className="pic" src={require('/images' + job.logo)} alt="comapny logo" width="50px" />
           </div> {/* /logo */}
           <div className="wrap__content  u-mr-r--medium  u-pdd-35">
-          <div className="title-first u-mr-b--small">
-            <h4 className="company-name  u-mr-r--small">{job.company}</h4>
-              {job.new ? (<span onClick={() => this.updateShow('new')} className="danger  u-mr-r--small">new </span>):null}
-              {job.featured ? (<span onClick={() => this.updateShow('featured')} className="danger  featured">featured</span>):null}
-          </div> {/* /title-first */}
-          <div className="title-second  u-mr-b--small">
-            <h3 onClick={() => this.updateShow(job.position)} className="position">{job.position}</h3>
-          </div> {/* /title-second */}
-          <span className="subline">{job.postedAt} - {job.contract} - {job.location}</span>
+            <div className="title-first u-mr-b--small">
+              <h4 className="company-name  u-mr-r--small">{job.company}</h4>
+                {job.new ? (<span onClick={() => this.updateShow('new')} className="danger  u-mr-r--small">new </span>):null}
+                {job.featured ? (<span onClick={() => this.updateShow('featured')} className="danger  featured">featured</span>):null}
+            </div> {/* /title-first */}
+            <div className="title-second  u-mr-b--small">
+              <h3 onClick={() => this.updateShow(job.position)} className="position">{job.position}</h3>
+            </div> {/* /title-second */}
+            <span className="subline">{job.postedAt} - {job.contract} - {job.location}</span>
           </div> {/* /wrap__info */}
-      <div className="fitler-tablets  u-pdd-r--large"><span onClick={() => this.updateShow(job.role)} className="danger  tablets  u-mr-r--small">{job.role}</span>
-        <span onClick={() => this.updateShow(job.level)} className="danger  tablets  u-mr-r--small">{job.level}</span>
-      {job.languages ? job.languages.map( (language) => 
-      <span onClick={() => this.updateShow(language) } key={language} className="danger  tablets  u-mr-r--small">{language} </span>
-      
-      ) : null}</div>
+          <div className="fitler-tablets  u-pdd-r--large"><span onClick={() => this.updateShow(job.role)} className="danger  tablets  u-mr-r--small">{job.role}</span>
+            <span onClick={() => this.updateShow(job.level)} className="danger  tablets  u-mr-r--small">{job.level}</span>
+          {job.languages ? job.languages.map( (language) => 
+          <span onClick={() => this.updateShow(language) } key={language} className="danger  tablets  u-mr-r--small">{language} </span>
+          
+          ) : null}</div>
         </div> /* /jobcard */
       )
     })
