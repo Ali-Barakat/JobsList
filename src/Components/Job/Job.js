@@ -20,7 +20,7 @@ export default class Job extends Component {
   render() {
     let jobs = [];
     const jobsToShow = this.state.jobsToShow;
-    let languages =this.state.jobs.map(job => job.languages);
+    // let languages =this.state.jobs.map(job => job.languages);
     if (jobsToShow === 'all') {
       jobs = this.state.jobs;
     } else if (jobsToShow === 'featured') {
@@ -56,6 +56,13 @@ export default class Job extends Component {
     } else if (jobsToShow === 'Junior') {
       jobs = this.state.jobs.filter(job => job.level === jobsToShow)
     }else if (this.state.jobsToShow === 'HTML') {
+      jobs = this.state.jobs.filter(job => job.languages && job.languages.indexOf(jobsToShow) > -1)
+    } else if (this.state.jobsToShow === 'CSS') {
+      jobs = this.state.jobs.filter(job => job.languages && job.languages.indexOf(jobsToShow) > -1)
+    } else if (this.state.jobsToShow === 'JavaScript') {
+      jobs = this.state.jobs.filter(job => job.languages && job.languages.indexOf(jobsToShow) > -1)
+    } else if (this.state.jobsToShow === 'Python') {
+      jobs = this.state.jobs.filter(job => job.languages && job.languages.indexOf(jobsToShow) > -1)
     }
 
     const jobList = jobs.map(job => {
@@ -89,7 +96,8 @@ export default class Job extends Component {
       <div>
         <div className="u-mr-b--small u-pdd-t--small">
           {(this.state.jobsToShow && this.state.jobsToShow !== 'all') ?
-          <div className="header"><div className="wrap__tags"><span className="tags">{this.state.jobsToShow}</span></div><div className="wrap__clear"><span onClick={() => this.updateShow('all')} className="clear">clear</span></div></div> : null}
+          <div className="header"><div className="wrap__tags"><span className="tags">{this.state.jobsToShow} {jobs.length}</span></div>
+          <div className="wrap__clear"><span onClick={() => this.updateShow('all')} className="clear">clear</span></div></div> : null}
         </div>
         <div className="job-list">{jobList}</div>
       </div>
