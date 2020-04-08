@@ -54,7 +54,8 @@
 }
 
 .fitler-tablets {
-  line-height: 11;
+  padding-top: 60px;
+  line-height: 2;
   text-align: right;
   width: 50%;
 }
@@ -183,11 +184,14 @@
   }
 
   .fitler-tablets {
-    display: inline-block;
     line-height: 2.5;
-    padding: 17px 10px 25px 30px;
+    padding: 17px 25px 25px 30px;
     width: 100%;
     text-align: left;
+
+    .danger {
+      display: inline;
+    }
 
     .tablets {
       display: inline;
